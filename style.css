@@ -48,9 +48,14 @@ header{
   text-align: center;
 }
 
+section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* Create two columns/boxes that floats next to each other */
 nav {
-  float: left;
   width: 30%;
   height: 300px; /* only for demonstration, should be removed */
   background: #ccc;
@@ -59,8 +64,31 @@ nav {
 
 /* Style the list inside the menu */
 nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   list-style-type: none;
   padding: 0;
+}
+
+nav ul li {
+  font-size: 20px;
+  padding: 20px;
+}
+
+nav ul li a{
+  color: #666;
+  font-weight: bold;
+  padding: 10px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 10px 40px;
+}
+
+nav ul li:hover a{
+  color: #fff;
+  background: #666;
 }
 
 article {
@@ -69,6 +97,13 @@ article {
   width: 70%;
   background-color: #f1f1f1;
   height: 300px; /* only for demonstration, should be removed */
+}
+
+article h1{
+  font-size: 20px;
+  padding: 10px;
+  background: #ccc;
+  border-radius: 16px;
 }
 
 /* Clear floats after the columns */
